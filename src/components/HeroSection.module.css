@@ -1,0 +1,330 @@
+.heroSection {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #111214;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: 47% 56%;
+  filter: brightness(0.72) saturate(0.78);
+}
+
+.heroOverlay {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 26%, rgb(255 255 255 / 0.03), transparent 20%),
+    linear-gradient(
+      90deg,
+      rgb(8 10 14 / 0.92) 0%,
+      rgb(8 10 14 / 0.82) 32%,
+      rgb(8 10 14 / 0.52) 58%,
+      rgb(8 10 14 / 0.74) 100%
+    ),
+    linear-gradient(180deg, rgb(8 10 14 / 0.56) 0%, rgb(8 10 14 / 0.26) 32%, rgb(8 10 14 / 0.64) 100%);
+}
+
+.heroTopFade {
+  pointer-events: none;
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 8rem;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.4), transparent);
+}
+
+.heroBottomFade {
+  pointer-events: none;
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 11rem;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.64), transparent);
+}
+
+.heroShell {
+  position: relative;
+  z-index: 20;
+  margin-inline: auto;
+  display: flex;
+  min-height: 100svh;
+  width: 100%;
+  max-width: 1680px;
+  flex-direction: column;
+  padding: 1rem 1rem 2rem;
+}
+
+.heroHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heroHeaderSide {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+}
+
+.heroHeaderSideEnd {
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.heroBrandLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.78);
+}
+
+.heroLogoWrap {
+  display: block;
+  width: 108px;
+}
+
+.heroLogoImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.heroNav {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+.heroNavLink {
+  font-size: 0.68rem;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.68);
+  transition: color 0.2s ease;
+}
+
+.heroNavLink:hover {
+  color: rgb(255 255 255);
+}
+
+.heroLangBtn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 0.14);
+  background: rgb(0 0 0 / 0.1);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.72);
+  backdrop-filter: blur(4px);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.heroLangBtn:hover {
+  border-color: rgb(255 255 255 / 0.24);
+  color: rgb(255 255 255);
+}
+
+.heroMenuBtn {
+  display: inline-flex;
+  height: 2.75rem;
+  width: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 0.14);
+  background: rgb(0 0 0 / 0.1);
+  color: rgb(255 255 255);
+  backdrop-filter: blur(4px);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.heroMenuBtn:hover {
+  border-color: rgb(255 255 255 / 0.24);
+  background: rgb(0 0 0 / 0.18);
+}
+
+.heroMenuLines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.heroMenuLines span {
+  display: block;
+  height: 1px;
+  width: 1rem;
+  background: currentColor;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding-top: 5.5rem;
+  padding-bottom: 4rem;
+}
+
+.heroCopy {
+  max-width: 36rem;
+  border-radius: 20px;
+  border: 1px solid rgb(255 255 255 / 0.08);
+  background: linear-gradient(180deg, rgb(7 9 13 / 0.48), rgb(7 9 13 / 0.28));
+  padding: 1.5rem 1.35rem 1.25rem;
+  backdrop-filter: blur(2px);
+}
+
+.heroCopyHead {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.heroEyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.58);
+}
+
+.heroHeadline {
+  max-width: 15ch;
+  font-size: 1.95rem;
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  color: rgb(255 255 255);
+}
+
+.heroSubtext {
+  margin-top: 0.85rem;
+  max-width: 37ch;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgb(255 255 255 / 0.72);
+}
+
+.heroCtaRow {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.heroCta {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  padding-inline: 1.5rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.heroCtaPrimary {
+  border: 1px solid #f18624;
+  background: #f18624;
+  color: #15171a;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.18);
+}
+
+.heroCtaPrimary:hover {
+  border-color: #f39b44;
+  background: #f39b44;
+}
+
+.heroCtaSecondary {
+  border: 1px solid rgb(255 255 255 / 0.14);
+  background: rgb(0 0 0 / 0.1);
+  color: rgb(255 255 255 / 0.82);
+  backdrop-filter: blur(4px);
+}
+
+.heroCtaSecondary:hover {
+  border-color: rgb(255 255 255 / 0.24);
+  color: rgb(255 255 255);
+}
+
+@media (min-width: 640px) {
+  .heroShell {
+    padding: 1.5rem 1.5rem 2.5rem;
+  }
+
+  .heroLogoWrap {
+    width: 122px;
+  }
+
+  .heroLangBtn {
+    display: inline-flex;
+  }
+
+  .heroContent {
+    padding-top: 6.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .heroCopy {
+    max-width: 37rem;
+    padding: 1.8rem 1.6rem 1.45rem;
+  }
+
+  .heroHeadline {
+    max-width: 17ch;
+    font-size: 2.7rem;
+  }
+
+  .heroSubtext {
+    max-width: 38ch;
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .heroCtaRow {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroShell {
+    padding: 2rem 2.5rem 3rem;
+  }
+
+  .heroNav {
+    display: flex;
+  }
+
+  .heroContent {
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+  }
+
+  .heroCopy {
+    max-width: 39rem;
+    padding: 2rem 1.8rem 1.6rem;
+  }
+
+  .heroHeadline {
+    max-width: 17ch;
+    font-size: 3.6rem;
+  }
+
+  .heroSubtext {
+    max-width: 40ch;
+    font-size: 1.02rem;
+  }
+}
