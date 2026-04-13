@@ -14,7 +14,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Flaechenschneeschieber GmbH",
+  title: "Flächenschneeschieber GmbH",
   description:
     "Premium presentation website for professional snow plow systems and large-area winter service equipment.",
 };

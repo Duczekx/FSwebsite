@@ -4,10 +4,10 @@ const productModels = ["FL 540", "FL 470", "FL 400", "FL 340", "FL 260"];
 
 const productFacts = [
   { label: "Modell", value: "FL 540" },
-  { label: "Einsatz", value: "Grosse Park- und Industrieflaechen" },
+  { label: "Einsatz", value: "Große Park- und Industrieflächen" },
   { label: "Aufnahme", value: "Traktor oder Fronthydraulik" },
   { label: "Verstellung", value: "Hydraulisch steuerbar" },
-  { label: "Schuerfleiste", value: "Austauschbar und verschleissarm" },
+  { label: "Schürfleiste", value: "Austauschbar und verschleißarm" },
 ];
 
 export default function ProductsSection() {
@@ -23,8 +23,8 @@ export default function ProductsSection() {
               </h2>
             </div>
             <p className={styles.productsTopText}>
-              Der Bereich ist bereits auf die spaetere Blender-Praesentation
-              ausgelegt: links die Modellwahl, mittig die grosse Buehne fuer den
+              Der Bereich ist bereits auf die spätere Blender-Präsentation
+              ausgelegt: links die Modellwahl, mittig die große Bühne für den
               aktiven Pflug, rechts die wichtigsten Daten.
             </p>
           </div>
@@ -61,7 +61,7 @@ export default function ProductsSection() {
                     <div className={styles.productsRenderInner}>
                       <p className={styles.productsRenderKicker}>Blender Render Slot</p>
                       <p className={styles.productsRenderText}>
-                        Buehne fuer den freigestellten Pflug im finalen Produktlook.
+                        Bühne für den freigestellten Pflug im finalen Produktlook.
                       </p>
                     </div>
                   </div>
@@ -78,7 +78,7 @@ export default function ProductsSection() {
               <div className={styles.productsFactsHead}>
                 <p className={styles.productsFactsKicker}>FL 540</p>
                 <h3 className={styles.productsFactsTitle}>
-                  Fuer grosse Flaechen mit maximaler Praesenz.
+                  Für große Flächen mit maximaler Präsenz.
                 </h3>
               </div>
 
