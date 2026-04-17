@@ -8,7 +8,7 @@
 .heroImage {
   object-fit: cover;
   object-position: 52% 56%;
-  filter: brightness(0.98) saturate(0.74);
+  filter: brightness(0.98) saturate(1);
 }
 
 .heroOverlay {
@@ -16,15 +16,15 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 18% 26%, rgb(255 255 255 / 0.03), transparent 20%),
+    radial-gradient(circle at 18% 26%, rgb(255 255 255 / 0.017), transparent 20%),
     linear-gradient(
       90deg,
-      rgb(8 10 14 / 0.92) 0%,
-      rgb(8 10 14 / 0.82) 32%,
-      rgb(8 10 14 / 0.52) 58%,
-      rgb(8 10 14 / 0.74) 100%
+      rgb(8 10 14 / 0.51) 0%,
+      rgb(8 10 14 / 0.45) 32%,
+      rgb(8 10 14 / 0.29) 58%,
+      rgb(8 10 14 / 0.41) 100%
     ),
-    linear-gradient(180deg, rgb(8 10 14 / 0.56) 0%, rgb(8 10 14 / 0.26) 32%, rgb(8 10 14 / 0.64) 100%);
+    linear-gradient(180deg, rgb(8 10 14 / 0.31) 0%, rgb(8 10 14 / 0.14) 32%, rgb(8 10 14 / 0.35) 100%);
 }
 
 .heroTopFade {
@@ -33,7 +33,7 @@
   inset-inline: 0;
   top: 0;
   height: 8rem;
-  background: linear-gradient(to bottom, rgb(0 0 0 / 0.4), transparent);
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.22), transparent);
 }
 
 .heroBottomFade {
@@ -42,7 +42,7 @@
   inset-inline: 0;
   bottom: 0;
   height: 11rem;
-  background: linear-gradient(to top, rgb(0 0 0 / 0.64), transparent);
+  background: linear-gradient(to top, rgb(0 0 0 / 0.35), transparent);
 }
 
 .heroShell {
@@ -112,6 +112,28 @@
 .heroHeaderSideEnd {
   justify-content: flex-end;
   gap: 0.75rem;
+}
+
+.heroConfiguratorLink {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.45rem;
+  border-radius: 999px;
+  border: 1px solid rgb(241 134 36 / 0.5);
+  background: rgb(241 134 36 / 0.06);
+  padding-inline: 0.88rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.78);
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.heroConfiguratorLink:hover {
+  border-color: rgb(241 134 36 / 0.72);
+  background: rgb(241 134 36 / 0.12);
+  color: #ffb164;
 }
 
 .heroBrandLink {
@@ -187,21 +209,100 @@
   display: none;
   align-items: center;
   justify-content: center;
+  gap: 0.32rem;
   border-radius: 999px;
   border: 1px solid rgb(255 255 255 / 0.14);
   background: rgb(0 0 0 / 0.1);
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.72rem;
   font-size: 0.62rem;
-  letter-spacing: 0.34em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgb(255 255 255 / 0.72);
   backdrop-filter: blur(4px);
   transition: border-color 0.2s ease, color 0.2s ease;
 }
 
+.heroLangWrap {
+  position: relative;
+}
+
+.heroFlagIcon {
+  width: 1rem;
+  height: auto;
+  border-radius: 0.14rem;
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 0.08);
+}
+
+.heroLangDot {
+  width: 0.2rem;
+  height: 0.2rem;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.38);
+}
+
 .heroLangBtn:hover {
   border-color: rgb(255 255 255 / 0.24);
   color: rgb(255 255 255);
+}
+
+.heroLangMenu {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  z-index: 140;
+  display: grid;
+  gap: 0.3rem;
+  min-width: 7.6rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgb(255 255 255 / 0.16);
+  background: rgb(6 8 12 / 0.96);
+  padding: 0.4rem;
+  backdrop-filter: blur(10px);
+}
+
+.heroLangOption {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.35rem;
+  min-height: 2.1rem;
+  border-radius: 0.65rem;
+  border: 1px solid transparent;
+  background: rgb(255 255 255 / 0.02);
+  padding-inline: 0.55rem;
+  color: rgb(255 255 255 / 0.9);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.heroLangOption:hover {
+  border-color: rgb(255 255 255 / 0.22);
+  background: rgb(255 255 255 / 0.06);
+}
+
+.heroLangOptionActive {
+  border-color: rgb(241 134 36 / 0.5);
+  background: rgb(241 134 36 / 0.12);
+  color: #f6a048;
+}
+
+.heroLangOptionFlag {
+  font-size: 0.8rem;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.heroLangOptionCode {
+  line-height: 1;
+}
+
+.heroLangOptionLabel {
+  margin-left: auto;
+  font-size: 0.56rem;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  color: rgb(255 255 255 / 0.62);
 }
 
 .heroMenuBtn {
@@ -237,55 +338,179 @@
 }
 
 .heroMobileNav {
-  pointer-events: none;
   position: fixed;
   inset: 0;
-  z-index: 90;
-  opacity: 0;
-  transition: opacity 0.24s ease;
+  z-index: 120;
+  display: flex;
+  flex-direction: column;
+  background: rgb(4 6 9 / 0.97);
+  backdrop-filter: blur(8px);
+  padding: max(0.9rem, env(safe-area-inset-top)) 1rem max(1.2rem, env(safe-area-inset-bottom));
 }
 
-.heroMobileNavOpen {
-  pointer-events: auto;
-  opacity: 1;
+.heroMobileNavTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 2.8rem;
 }
 
-.heroMobileNavBackdrop {
-  position: absolute;
-  inset: 0;
-  border: 0;
-  background:
-    linear-gradient(180deg, rgb(6 8 12 / 0.9), rgb(6 8 12 / 0.74)),
-    linear-gradient(90deg, rgb(6 8 12 / 0.7), rgb(6 8 12 / 0.46));
-  backdrop-filter: blur(6px);
+.heroMobileNavTopLabel {
+  font-size: 0.66rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.56);
+}
+
+.heroMobileNavClose {
+  display: inline-flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 0.16);
+  background: rgb(255 255 255 / 0.04);
+  color: rgb(255 255 255 / 0.88);
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 .heroMobileNavPanel {
-  position: relative;
-  z-index: 1;
-  margin: 5.8rem 1rem 0;
+  margin-top: 1.1rem;
   display: grid;
-  gap: 0.65rem;
+  gap: 0.35rem;
+  align-content: start;
 }
 
 .heroMobileNavLink {
   display: flex;
-  min-height: 3rem;
+  min-height: 3.55rem;
   align-items: center;
-  border-radius: 0.9rem;
-  border: 1px solid rgb(255 255 255 / 0.1);
-  background: rgb(255 255 255 / 0.03);
-  padding: 0.85rem 1rem;
-  font-size: 0.74rem;
-  letter-spacing: 0.24em;
+  justify-content: space-between;
+  border-radius: 0.85rem;
+  border: 1px solid transparent;
+  background: rgb(255 255 255 / 0.02);
+  padding: 0.9rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: rgb(255 255 255 / 0.84);
+  color: rgb(255 255 255 / 0.88);
 }
 
 .heroMobileNavLinkActive {
-  border-color: rgb(241 134 36 / 0.7);
+  border-color: rgb(241 134 36 / 0.36);
+  background: rgb(241 134 36 / 0.09);
+  color: #f6a048;
+}
+
+.heroMobileConfiguratorLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 3.55rem;
+  margin-top: 0.8rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgb(241 134 36 / 0.42);
+  background: rgb(241 134 36 / 0.08);
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f6a048;
+}
+
+.heroMobileNavArrow {
+  font-size: 1.35rem;
+  line-height: 1;
+  color: rgb(255 255 255 / 0.5);
+}
+
+.heroMobileLocaleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.85rem;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  background: rgb(255 255 255 / 0.03);
+  padding: 0.8rem 0.95rem;
+  color: rgb(255 255 255 / 0.9);
+  text-align: left;
+}
+
+.heroMobileLocaleBlock {
+  margin-top: auto;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.heroMobileLocaleFlag {
+  width: 1.65rem;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.heroMobileLocaleFlagIcon {
+  width: 1.14rem;
+  height: auto;
+  border-radius: 0.14rem;
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 0.08);
+}
+
+.heroMobileLocaleText {
+  display: grid;
+  flex: 1;
+  gap: 0.08rem;
+}
+
+.heroMobileLocaleTitle {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.58);
+}
+
+.heroMobileLocaleValue {
+  font-size: 0.96rem;
+  letter-spacing: 0.01em;
+  color: rgb(255 255 255 / 0.92);
+}
+
+.heroMobileLocaleList {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.heroMobileLocaleOption {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.35rem;
+  min-height: 2.8rem;
+  border-radius: 0.72rem;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  background: rgb(255 255 255 / 0.02);
+  padding-inline: 0.75rem;
+  color: rgb(255 255 255 / 0.9);
+  font-size: 0.74rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.heroMobileLocaleOptionActive {
+  border-color: rgb(241 134 36 / 0.5);
   background: rgb(241 134 36 / 0.12);
-  color: rgb(255 255 255);
+  color: #f6a048;
+}
+
+.heroMobileLocaleOptionLabel {
+  margin-left: auto;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  color: rgb(255 255 255 / 0.62);
 }
 
 .heroContent {
@@ -382,6 +607,81 @@
   color: rgb(255 255 255);
 }
 
+@media (max-width: 639px) {
+  .heroShell {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+
+  .stickyNavInner {
+    padding-top: max(0.48rem, calc(env(safe-area-inset-top) + 0.14rem));
+  }
+
+  .heroImage {
+    object-position: 52% 68%;
+  }
+
+  .heroContent {
+    padding-top: 2.25rem;
+    padding-bottom: 2.8rem;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .heroCopy {
+    max-width: 34rem;
+    margin-inline: auto;
+    padding: 1.35rem 0.25rem 0.85rem;
+    background: linear-gradient(180deg, rgb(7 9 13 / 0.18) 0%, rgb(7 9 13 / 0.06) 100%);
+    text-align: center;
+  }
+
+  .heroCopyHead {
+    justify-items: center;
+  }
+
+  .heroEyebrow {
+    font-size: 0.56rem;
+    letter-spacing: 0.28em;
+  }
+
+  .heroHeadline {
+    max-width: 12ch;
+    font-size: 1.5rem;
+    line-height: 1.06;
+  }
+
+  .heroSubtext {
+    max-width: 30ch;
+    margin-inline: auto;
+    font-size: 0.76rem;
+    line-height: 1.62;
+    letter-spacing: 0.01em;
+  }
+
+  .heroCtaRow {
+    position: absolute;
+    left: 50%;
+    bottom: calc(2.8rem + env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    margin-top: 0;
+    width: min(22rem, calc(100% - 1.4rem));
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.45rem;
+    z-index: 25;
+  }
+
+  .heroCta {
+    width: calc(50% - 0.225rem);
+    max-width: none;
+    min-width: 0;
+    min-height: 2.45rem;
+    padding-inline: 0.55rem;
+    letter-spacing: 0.19em;
+  }
+}
+
 @media (min-width: 640px) {
   .heroShell {
     padding: 1.5rem 1.5rem 2.5rem;
@@ -416,6 +716,10 @@
     display: inline-flex;
   }
 
+  .heroConfiguratorLink {
+    display: inline-flex;
+  }
+
   .heroContent {
     padding-top: 6.5rem;
     padding-bottom: 4.5rem;
@@ -442,8 +746,8 @@
     align-items: center;
   }
 
-  .heroMobileNavPanel {
-    margin-inline: 1.5rem;
+  .heroMobileNav {
+    padding-inline: 1.5rem;
   }
 }
 
@@ -458,6 +762,14 @@
 
   .heroNav {
     display: flex;
+  }
+
+  .heroMenuBtn {
+    display: none;
+  }
+
+  .heroMobileConfiguratorLink {
+    display: none;
   }
 
   .heroContent {
@@ -481,9 +793,7 @@
     line-height: 1.84;
   }
 
-  .heroMobileNavPanel {
-    margin-top: 7rem;
-    margin-inline: auto;
-    width: min(36rem, calc(100% - 5rem));
+  .heroMobileNav {
+    display: none;
   }
 }
